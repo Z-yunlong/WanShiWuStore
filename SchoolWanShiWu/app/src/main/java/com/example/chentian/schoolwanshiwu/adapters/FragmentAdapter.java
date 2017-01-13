@@ -1,4 +1,4 @@
-package com.example.chentian.schoolwanshiwu.fragments;
+package com.example.chentian.schoolwanshiwu.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

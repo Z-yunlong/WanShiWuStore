@@ -8,7 +8,7 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.example.chentian.schoolwanshiwu.fragments.FindFragment;
-import com.example.chentian.schoolwanshiwu.fragments.FragmentAdapter;
+import com.example.chentian.schoolwanshiwu.adapters.FragmentAdapter;
 import com.example.chentian.schoolwanshiwu.fragments.NoScrollViewPager;
 import com.example.chentian.schoolwanshiwu.fragments.OrderFragment;
 import com.example.chentian.schoolwanshiwu.fragments.PersonFragment;
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void ClickPerson(View view) {
         //将顶部标题栏改为当前点击的
-        titleText.setText("用户");
+        titleText.setText("");
         //更改ViewPager的显示
         mViewPager.setCurrentItem(2);
     }
