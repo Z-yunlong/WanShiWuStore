@@ -21,9 +21,19 @@ import java.util.List;
  */
 
 public class FindFragment extends Fragment {
+    public List<String> getTiles() {
+        return tiles;
+    }
+
+    public List<String> getContents() {
+        return contents;
+    }
+
     List<String> tiles = new ArrayList<>();
     List<String> contents = new ArrayList<>();
     Context mContext;
+
+    RecyclerView recycler;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,25 +45,19 @@ public class FindFragment extends Fragment {
     private void initDatas() {
         tiles.add("取快递");
         tiles.add("带饭");
-        tiles.add("取快递");
-        tiles.add("取快递");
-        tiles.add("取快递");
-        tiles.add("带饭");
-        tiles.add("带饭");
-        tiles.add("带饭");
-        tiles.add("取快递");
-        tiles.add("取快递");
 
-        contents.add("下午十点之前取来\\n电话：135XXXX5510");
-        contents.add("下午九点之前取来\\n电话：135XXXX5509");
-        contents.add("下午八点之前取来\\n电话：135XXXX5508");
-        contents.add("下午七点之前取来\\n电话：135XXXX5507");
-        contents.add("下午六点之前取来\\n电话：135XXXX5506");
-        contents.add("下午五点之前取来\\n电话：135XXXX5505");
-        contents.add("下午四点之前取来\\n电话：135XXXX5504");
-        contents.add("下午三点之前取来\\n电话：135XXXX5503");
-        contents.add("下午二点之前取来\\n电话：135XXXX5502");
-        contents.add("下午一点之前取来\\n电话：135XXXX5501");
+        contents.add("下午十点之前取来" +"\n"+
+                "电话：135XXXX5510");
+        contents.add("下午九点之前取来" +"\n"+
+                "电话：135XXXX5509");
+    }
+
+    public RecyclerView getRecycler() {
+        return recycler;
+    }
+
+    public void setRecycler(RecyclerView recycler) {
+        this.recycler = recycler;
     }
 
     @Nullable
@@ -64,6 +68,8 @@ public class FindFragment extends Fragment {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(new MyRecyclerViewAdapter(tiles,contents,mContext));
+
+        setRecycler(recyclerView);
 
         return layout;
     }

@@ -1,5 +1,6 @@
 package com.example.chentian.schoolwanshiwu.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.chentian.schoolwanshiwu.NewOrderActivity;
 import com.example.chentian.schoolwanshiwu.R;
 
 /**
@@ -47,6 +49,8 @@ public class OrderFragment extends Fragment implements View.OnClickListener{
 
             case R.id.text_new:
                 Toast.makeText(getContext(), "新的订单", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), NewOrderActivity.class);
+                startActivity(intent);
                 break;
         }
     }
