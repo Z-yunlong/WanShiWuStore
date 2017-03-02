@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.chentian.schoolwanshiwu.FabuActivity;
+import com.example.chentian.schoolwanshiwu.GetOrderActivity;
 import com.example.chentian.schoolwanshiwu.NewOrderActivity;
 import com.example.chentian.schoolwanshiwu.R;
 
@@ -41,10 +43,14 @@ public class OrderFragment extends Fragment implements View.OnClickListener{
         switch (view.getId()){
             case R.id.text_accept:
                 Toast.makeText(getContext(), "接受的订单", Toast.LENGTH_SHORT).show();
+                Intent intent2 = new Intent(getActivity(), GetOrderActivity.class);
+                startActivity(intent2);
                 break;
 
             case R.id.text_publish:
                 Toast.makeText(getContext(), "发布的订单", Toast.LENGTH_SHORT).show();
+                Intent intent3 = new Intent(getActivity(), FabuActivity.class);
+                startActivity(intent3);
                 break;
 
             case R.id.text_new:

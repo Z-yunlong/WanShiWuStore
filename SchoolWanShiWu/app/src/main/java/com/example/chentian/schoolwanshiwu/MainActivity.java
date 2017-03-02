@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         fragments.add(new PersonFragment());
 
         mAdapter = new FragmentAdapter(getSupportFragmentManager(),fragments);
+
     }
 
     public void ClickPerson(View view) {
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     //刷新recyclerView的item,更新数据
     private void FreshData() {
         FindFragment find = (FindFragment) fragments.get(0);
-        RecyclerView recycler = find.getRecycler();
+        final RecyclerView recycler = find.getRecycler();
         final List<String> mtiles = find.getTiles();
         final List<String> mcontents = find.getContents();
 

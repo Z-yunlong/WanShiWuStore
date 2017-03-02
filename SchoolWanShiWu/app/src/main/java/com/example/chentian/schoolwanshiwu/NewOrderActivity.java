@@ -47,6 +47,9 @@ public class NewOrderActivity extends Activity {
             valus.put("LeiXing","带饭");
         }
 
+        FabuActivity.FabuTiles.add(valus.get("LeiXing"));
+        FabuActivity.FabuContents.add(valus.get("LianXi")+"\n"+valus.get("MiaoShu"));
+
         new Thread(new Runnable() {
             @Override
             public void run() {

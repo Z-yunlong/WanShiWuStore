@@ -20,6 +20,9 @@
         </activity>
 
         <activity android:name=".NewOrderActivity"/>
+        <activity android:name=".DetailActivity"/>
+        <activity android:name=".GetOrderActivity"/>
+        <activity android:name=".FabuActivity"/>
     </application>
 
 </manifest>
