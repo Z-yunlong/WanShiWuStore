@@ -82,6 +82,11 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recycler = find.getRecycler();
         final List<String> mtiles = find.getTiles();
         final List<String> mcontents = find.getContents();
+
+        //避免数据重复，先清空之前的数据
+        mtiles.clear();
+        mcontents.clear();
+
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -106,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("TAG",valu);
 
                     String[] strs = valu.split(" ");
+
                     for (int i = 0;i<strs.length;i++){
                         mtiles.add(strs[i]);
                         mcontents.add(strs[i+2] +"\n"+

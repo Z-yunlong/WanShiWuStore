@@ -38,19 +38,19 @@ public class FindFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initDatas();
+        //initDatas();
         mContext = getContext();
     }
 
-    private void initDatas() {
-        tiles.add("取快递");
-        tiles.add("带饭");
-
-        contents.add("下午十点之前取来" +"\n"+
-                "电话：135XXXX5510");
-        contents.add("下午九点之前取来" +"\n"+
-                "电话：135XXXX5509");
-    }
+//    private void initDatas() {
+//        tiles.add("取快递");
+//        tiles.add("带饭");
+//
+//        contents.add("下午十点之前取来" +"\n"+
+//                "电话：135XXXX5510");
+//        contents.add("下午九点之前取来" +"\n"+
+//                "电话：135XXXX5509");
+//    }
 
     public RecyclerView getRecycler() {
         return recycler;
